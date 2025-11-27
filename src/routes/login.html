@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
     <title>gimmick $ login</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,11 +13,12 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            color: white;
             user-select: none;
         }
 
         body {
-            background-color: #4b4b4b;
+            background-color: #0a0a0a;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -27,74 +26,37 @@
         }
 
         .card {
-            background-color: #fff;
-            color: #000;
-            padding: 2.5rem 3rem;
-            border-radius: 10px;
+            background-color: #111;
+            padding: 3rem;
+            border-radius: 12px;
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
-            min-width: 360px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-            align-items: center;
+            box-shadow: 0 0 28px rgba(0, 0, 0, 0.7);
+            min-width: 380px;
         }
 
-        .logo {
+        h2 {
+            text-align: center;
             font-weight: 700;
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-        }
-
-        .google-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            border: 1px solid #d3d3d3;
-            padding: 0.7rem 1rem;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 500;
-            width: 100%;
-            background-color: #fff;
-            transition: background 0.15s;
-        }
-
-        .google-btn:hover {
-            background-color: #f0f0f0;
-        }
-
-        .divider {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            margin: 1rem 0;
-            font-size: 0.9rem;
-            color: #888;
-        }
-
-        .divider::before,
-        .divider::after {
-            content: '';
-            flex: 1;
-            border-bottom: 1px solid #ccc;
-            margin: 0 0.5rem;
+            font-size: 1.8rem;
         }
 
         .inputs {
             display: flex;
             flex-direction: column;
-            gap: 0.8rem;
-            width: 100%;
+            gap: 1rem;
         }
 
         input {
-            padding: 0.7rem 0.9rem;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            outline: none;
+            background-color: #181818;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 0.9rem 1rem;
             font-size: 1rem;
-            width: 100%;
+            color: white;
+            outline: none;
+            transition: 0.2s;
         }
 
         input:focus {
@@ -105,12 +67,12 @@
         button {
             background-color: #4b8bff;
             border: none;
-            border-radius: 6px;
-            color: white;
-            font-weight: 600;
-            padding: 0.7rem;
-            cursor: pointer;
+            border-radius: 8px;
+            padding: 0.9rem 1rem;
             font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.15s;
         }
 
         button:hover {
@@ -118,45 +80,30 @@
         }
 
         .note {
-            font-size: 0.8rem;
-            color: #555;
             text-align: center;
-        }
-
-        .note a {
-            color: #4b8bff;
-            text-decoration: none;
-        }
-
-        .note a:hover {
-            text-decoration: underline;
+            font-size: 0.8rem;
+            opacity: 0.75;
         }
     </style>
 </head>
 
 <body>
     <div class="card">
-        <div class="logo">Gimmick $</div>
-
-        <div class="google-btn">
-            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" width="18">
-            Continue with Google
-        </div>
-
-        <div class="divider">or</div>
+        <h2>gimmick $ login</h2>
 
         <div class="inputs">
-            <input id="username" type="text" placeholder="Email address" />
-            <input id="password" type="text" placeholder="Password" />
-            <button id="gimkitLogin">Continue</button>
+            <input placeholder='gimkit username' id='username' type='text' />
+            <input placeholder='gimkit password' id='password' type='text' />
         </div>
 
+        <button id='gimkitLogin'>login with gimkit</button>
+
         <div class="note">
-            No account found? If you're an educator, click <a href="#">sign up</a>
+            If you use Google login, add a password from gimkit.com/settings
         </div>
     </div>
 
     <script src="login.js"></script>
 </body>
-
+<!--final commit, will make private after pushed-->
 </html>
