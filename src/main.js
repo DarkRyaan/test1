@@ -3,7 +3,7 @@ import fs from 'node:fs';
 
 import paths from './paths.js';
 
-let script = await fetch(`https://github.com/DarkRyaan/GimkitCheatwithcustomkeybind/blob/main/build/bundle.js`);
+let script = await fetch(`https://github.com/TheLazySquid/GimkitCheat/blob/main/build/bundle.js`);
 fs.writeFileSync(import.meta.dirname + '/bundle.txt', await script.text());
 
 const app = express();
